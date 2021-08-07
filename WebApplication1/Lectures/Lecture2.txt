@@ -1,0 +1,24 @@
+﻿
+
+	When you click on "Service Description" link on on '.asmx' file it takes us to the url containing '?WSDL' in the end
+	And that's called 'WSDL Document' of WebService
+
+	WSDL DOCUMENT:
+		WSDL Document formally defines WebService
+
+		This document contains many things:
+
+		It contains list of all the methods that are exposed by the WebService and also there parameters with their specified 'Data Types'
+		It also shows the return types of our public methods.
+
+
+	-- See File StepByStep.txt
+
+
+	If you want to look at the generate 'Proxy Class'
+		> Select your project name and from top Solution Explorer tabs select 'Show All Files'
+		> Expand CalculatorService inside 'Connected Services' 
+		> Expand Reference.svcmap
+		> Open Reference.cs
+
+		* Inside there'll be a class called 'CalculatorWebServiceSoapClient' and this is your 'Proxy Class'

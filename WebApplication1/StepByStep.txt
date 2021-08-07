@@ -1,0 +1,17 @@
+﻿
+
+1. Right Click on Empty Asp.Net project 
+2. Click Add
+3. Add Web Service - CalculatorWebService.asmx
+4. Rename WebService namespace in WebService class file
+5. Create add method
+6. Run WebService by right click on '.asmx' file and click 'View in Browser'
+
+7. Add new project 'CalculatorWebApplication'
+8. Now generate proxy class -> Right Click on 'Reference' inside your Project -> Add Service Reference
+9. In the Address Bar, copy '.asmx' link of your Web Service and click 'Add'
+(If it's detected, it'll be add on 'Services' list)
+(If you expand that it'll also show all available methods of your WebService)
+10. Write 'CalculatorService' in 'Namespace' bar and click OK
+
+** Now your web service has been added to your 'CalculatorWebApplication' Project

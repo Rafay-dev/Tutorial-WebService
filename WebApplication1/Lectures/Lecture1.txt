@@ -1,0 +1,63 @@
+﻿
+
+WEB SERVICES:
+		It can be used for enabling an application to invoke a method of another application.
+		These application can be on same computer or different computers
+
+		As long as they're connected through network, web services can make them communicate to each other
+
+	Web Services use open standards and protocols like HTTP, XML, and SOAP
+
+	Since these are open and well known protocols, application built on any platform can interoperate with web services.
+
+	For Example, a JAVA application can communicate with a web services that is created using .NET or vice versa.
+
+
+	HYPER TEXT TRANSFER PROTOCOL (Http):
+		This protocol widely used by web services to send and receive messages.
+
+	The messaging protocol is SOAP:
+		SOAP stands for Simple Object Access Protocol
+		SOAP messages are in XML format.
+
+	Web Services have '.asmx' extension:
+		For this reason web services are also often called as ASMX web service.
+
+
+	* A Web Service is a class that is decorated with [WebService] attribute and inherits from System.Web.Services.WebService base  class:
+		The [WebService] attribute tells that this class contains the code for a web service.
+
+	* WebService Namespace is used to uniquely identify your web service on the internet from other services that are already there on the Web:
+		WebService Namespace can be any string, but it is common to give it a company's internet domain name as they are usually unique,
+		Something like:
+			[WebService(Namespace = "https://abccompany.com/webservices")]
+
+
+	* If you want to expose a method as part of web service to a client that is a calling application then that method needs to be decorated with '[WebMethod]' and it needs 
+	to be 'public' as well
+	- Or else client application won't be able to use that method
+
+
+
+
+	It's not mandatory for a Web Service to inherit from System.Web.Services.WebService base class. 
+	However, if the Web Service has to use ASP.NET session or application state objects, then inheriting from System.Web.Services.WebService base class will provide direct access to these asp.net objects.
+
+
+	To allow a Web Service to be called from Javascript, using ASP.NET AJAX, then decorate the web service class with [System.Web.Services.ScriptService] attribute.
+		LIKE:
+			[System.Web.Script.Services.ScriptService]
+
+	If you want a method to be exposed as part of the Web Service, then the method must be public and should be decorated with [WebMethod] attribute.
+	This attribute has got several properties which can be used to configure the behaviour of the XML Web Service method.
+
+	LIKE:
+	[WebMethod]
+	public string HelloWorld(){
+		return "Hello";
+	}
+
+	** SOAP 1.2 is a new version with some major changes
+
+
+	
